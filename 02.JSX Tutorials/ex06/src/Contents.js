@@ -3,6 +3,7 @@ import Clock01 from './Clock01.js';
 import Clock02 from './Clock02.js';
 import Clock03 from './Clock03.js';
 
+// props : default 파라미터 ???
 function Contents(props) {
     const now = new Date();
 
