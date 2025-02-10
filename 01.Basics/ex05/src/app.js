@@ -5,8 +5,14 @@ function App() {
 //    App.textContent = "Hello World!!!!";
 //    return App;
       
-    const App = React.createElement('div', null, "Hello World!!!", );
-    return App;
+    // const App = React.createElement('div', null, "Hello World!!!", );
+    // return App;
+
+    return(
+        <div>
+            Hello World!!!
+        </div>
+    )
 }
 
 export {App};

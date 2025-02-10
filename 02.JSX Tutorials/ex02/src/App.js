@@ -36,6 +36,5 @@ function App() {
 //         React.createElement('p', null, '특징 II: Sigle Root')
 //     );    
 // }
-//
 
 export {App};
