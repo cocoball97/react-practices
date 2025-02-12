@@ -1,17 +1,21 @@
 import React from 'react';
 import TabItem from './TabItem';
+import styled from 'styled-components';
+
+const StyledUL = styled.ul`
+    height: 24px;
+`;
 
 function Tabs({tabs}) {
     return (
-        <ul>
+        <StyledUL>
             {
-                // tabs 객체를 TabItem 컴포넌트로 변환
                 tabs.map(tab => <TabItem
                                     key={tab.no}
                                     name={tab.name}
                                     active={tab.active} />)
             }
-        </ul>
+        </StyledUL>
     );
 }
 

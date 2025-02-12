@@ -1,16 +1,22 @@
-import React from 'react'
+import React from 'react';
 import GroceryItem from './GroceryItem';
 
-function GroceryList({groceries}){
+function GroceryList({groceries}) {
+    // 과거 방식
     // const groceryItems = [];
-
     // groceries.forEach((grocery) => {
-    //     groceryItems.push(<GroceryItem name={grocery.name} count={grocery.count} />);
+    //    groceryItems.push(<GroceryItem name={grocery.name} count={grocery.count} />); 
     // });
 
-    return(
+    return (
         <ol className={"grocery-list"}>
-            {groceries.map((grocery, index) => <GroceryItem key={index} name={grocery.name} count={grocery.count} />)}
+            {   
+                // map 함수는 index 자동 전달
+                groceries.map( (grocery, index) => <GroceryItem
+                                                        key={index}
+                                                        name={grocery.name}
+                                                        count={grocery.count}/> )
+            }
         </ol>
     );
 }

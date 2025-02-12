@@ -1,7 +1,7 @@
 import React from 'react';
 import Banner01 from './Banner01';
 import Banner02 from './Banner02';
-import './assets/css/App.css';
+import './assets/css/App.css';      // 전역 css 가져오기
 
 function App() {
     return (
