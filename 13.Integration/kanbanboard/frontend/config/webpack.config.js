@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = function(env) {
     return {
         mode: "none",
-        entry: path.resolve('src/index.js'),
+        entry: path.resolve(`src/index.js`),
         output: {
             path: path.resolve('public'),
             filename: 'assets/js/main.js',
@@ -19,12 +19,16 @@ module.exports = function(env) {
                 }
             }, {
                 test: /\.(c|sa|sc)ss$/i,
-                use:['style-loader', {
+                use:[
+                    'style-loader',
+                    {
                         loader: 'css-loader',
                         options: {
-                            modules: true 
+                            modules: true
                         }
-                    }, 'sass-loader']
+                    }, 
+                    'sass-loader'
+                ]
             }, {
                 test: /\.(png|gif|jp?eg|svg|ico|tif?f|bmp)/i,
                 type: 'asset/resource'
@@ -33,10 +37,6 @@ module.exports = function(env) {
         devServer: {
             host: '0.0.0.0',
             port: 9090,
-            static: {
-                directory: path.resolve('public'),
-                watch: true
-            },        
             liveReload: true,
             compress: true,
             hot: false

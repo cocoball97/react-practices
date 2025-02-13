@@ -83,6 +83,7 @@ export default function App() {
                 onMouseMove={onMouseMoveImg}
                 onMouseOut={onMouseOutImg}
                 onMouseDown={onMouseDownImg}
+                onMouseUp={onMouseUpImg}
                 onClick={onClickImg}
                 onDoubleClick={onDoubleClickImg} />
         </>

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 
 function Incrementor02({val, step}) {
+    // setCount : 상태 변경 함수
     const [count, setCount] = useState(val);
 
     return (

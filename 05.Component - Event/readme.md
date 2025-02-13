@@ -15,7 +15,8 @@
 #### Examples
 1. Inline Handler - (예제: ex01)
 2. Function Handler - (예제: ex02)
-3. Synthetic Event - (예제: ex03)
+3. Synthetic Event - (예제: ex03)              
+   합성이벤트(Synthetic Event) : 모든 브라우저에서 이벤트를 동일하기 처리하기 위해 사용
 4. Event Handler Examples - (예제: ex04)
 5. Using ref: Function 컴포넌트 - (예제: ex05)
 6. Using ref: Class 컴포넌트 - (예제: ex06)
