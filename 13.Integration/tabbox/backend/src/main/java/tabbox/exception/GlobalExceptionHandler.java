@@ -1,4 +1,4 @@
-package com.poscodx.tabbox.exception;
+package tabbox.exception;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;

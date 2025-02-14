@@ -1,4 +1,4 @@
-package com.poscodx.tabbox.controller;
+package tabbox.controller;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
