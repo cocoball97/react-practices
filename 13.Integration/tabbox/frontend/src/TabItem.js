@@ -4,7 +4,7 @@ import {Tab_Item} from './assets/scss/TabItem.scss';
 function TabItem({no, name, active, selectTab}) {
     return (
         <li 
-            className={[Tab_Item, selectTab ? 'active' : ''].join(' ')}
+            className={[Tab_Item, active ? 'active' : ''].join(' ')}
             onClick={() => {
                 selectTab(no);
             }}>

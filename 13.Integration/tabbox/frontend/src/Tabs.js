@@ -14,7 +14,7 @@ function Tabs({tabs, selectTab}) {
                                     key={tab.no}
                                     no={tab.no}
                                     name={tab.name}
-                                    active={tab.active} 
+                                    active={tab.active}
                                     selectTab={selectTab} />)
             }
         </StyledUL>
