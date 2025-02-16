@@ -1,20 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import TaskList from './TaskList';
-import {_Card, Card_Title, Card_Title_Open}from './assets/scss/Card.scss';
+import * as styles from './assets/scss/Card.scss';
 
-const Card = ({title, description, tasks}) => {
+function Card({no, title, description, tasks}) {
+    const [isOpen, setIsOpen] = useState(true);
+
     return (
-        <div className={_Card}>
-            <div
-                className={[Card_Title].join(' ')}>
-                {title}
+        <div className={styles._Card}>
+            <div 
+                className={`${styles.Card_Title} ${isOpen ? styles.Card_Title_Open : ''}`}
+                onClick={() => setIsOpen(!isOpen)}
+                style={{ cursor: 'pointer' }}>
+                <strong>{title}</strong>
             </div>
-            <div>
-                {description}
-                <TaskList tasks={tasks} />
-            </div>
+
+            {isOpen && (
+                <>
+                    <div className='Card_Details'>{description}</div>
+                    <TaskList tasks={tasks}/>
+                </>
+            )}
         </div>
     );
-};
+}
 
 export default Card;

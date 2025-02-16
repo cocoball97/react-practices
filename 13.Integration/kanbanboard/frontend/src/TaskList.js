@@ -1,25 +1,22 @@
 import React from 'react';
 import Task from './Task';
-import {Task_List, Input_Add_Task} from './assets/scss/TaskList.scss';
+import {Task_List} from './assets/scss/TaskList.scss';
 
-const TaskList = ({tasks}) => {
+function TaskList({tasks}) {
     return (
         <div className={Task_List}>
             <ul>
-                {
-                    tasks?.map(task => <Task
-                                        key={task.no}
-                                        no={task.no}                                        
-                                        name={task.name}
-                                        done={task.done} />)
-                }
+                {tasks.map(e => (
+                    <Task 
+                        key={'task-'+e.no}
+                        no={e.no}
+                        name={e.name}
+                        done={e.done} />
+                ))}
             </ul>
-            <input
-                type='text'
-                placeholder={'태스크 추가'}
-                className={Input_Add_Task} />
+            <input className='Input_Add_Task' type='text' placeholder='태스크 추가'></input>
         </div>
     );
-};
+}
 
 export default TaskList;

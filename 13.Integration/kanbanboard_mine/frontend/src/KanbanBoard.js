@@ -6,7 +6,9 @@ import data from './assets/json/data';
 function KanbanBoard() {
     return (
         <div className={Kanban_Board}>
-            <CardList data={data}/>
+            <CardList data={data.filter(item => item.status === 'ToDo')} />
+            <CardList data={data.filter(item => item.status === 'Doing')} />
+            <CardList data={data.filter(item => item.status === 'Done')} />
         </div>
     );
 }

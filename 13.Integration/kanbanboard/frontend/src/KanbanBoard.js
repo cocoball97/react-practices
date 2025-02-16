@@ -1,28 +1,16 @@
-import React, {useState} from 'react';
-import CardList from './CardList.js';
-import './assets/scss/KanbanBoard.scss';
+import React from 'react';
+import CardList from './CardList';
+import {Kanban_Board} from './assets/scss/KanbanBoard.scss';
+import data from './assets/json/data';
 
-import data from './assets/json/data.js';
-
-const KanbanBoard = () => {
-    const [cards, setCards] = useState(data);
-
+function KanbanBoard() {
     return (
-            <div className={'Kanban_Board'}>
-                <CardList 
-                    key={'To Do'}
-                    title={'To Do'}
-                    cards={cards.filter(card => card.status === 'ToDo')} />
-                <CardList
-                    key={'Doing'}
-                    title={'Doing'}
-                    cards={cards.filter(card => card.status === 'Doing')} />
-                <CardList
-                    key={'Done'}
-                    title={'Done'}
-                    cards={cards.filter(card => card.status === 'Done')} />
-                </div>
+        <div className={Kanban_Board}>
+            <CardList data={data.filter(item => item.status === 'ToDo')} />
+            <CardList data={data.filter(item => item.status === 'Doing')} />
+            <CardList data={data.filter(item => item.status === 'Done')} />
+        </div>
     );
-};
+}
 
 export default KanbanBoard;
